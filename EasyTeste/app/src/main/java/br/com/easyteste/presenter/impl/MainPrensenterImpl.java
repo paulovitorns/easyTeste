@@ -66,7 +66,7 @@ public class MainPrensenterImpl implements MainPrensenter, FavoritesResponseList
 
     @Override
     public void onSuccess(Favorites favorites) {
-        managerPlaces.setLoaded();
+//        managerPlaces.setLoaded();
         mainView.showFragment(null);
     }
 }
