@@ -1,7 +1,10 @@
 package br.com.easyteste.datasource.api;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.squareup.okhttp.HttpUrl;
 
+import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 
 /**
@@ -20,11 +23,16 @@ public class Api {
 
     private static ServiceApi createRestAdapter(){
 
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd")
+                .create();
+
         System.setProperty("http.keepAlive", "false");
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_URL)
                 .client(ApiClient.getInstance())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
         return retrofit.create(ServiceApi.class);

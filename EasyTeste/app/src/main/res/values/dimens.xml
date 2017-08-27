@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Tamanho das fontes-->
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_regular">14sp</dimen>
+    <dimen name="font_mediun">16sp</dimen>
+    <dimen name="font_big">18sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_extra_large">24sp</dimen>
+
+
+    <!--Common margin-->
+    <dimen name="line_spacer_1">1dp</dimen>
+    <dimen name="line_spacer_2">2dp</dimen>
+    <dimen name="margin_micro">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_mediun">24dp</dimen>
+    <dimen name="margin_big">32dp</dimen>
+    <dimen name="margin_large">64dp</dimen>
+    <dimen name="margin_extra_large">128dp</dimen>
+
+    <!--EditTexts Sizes-->
+    <dimen name="edt_common_size">48dp</dimen>
+
+    <!--Buttons sizes-->
+    <dimen name="btn_common_dialog_width">100dp</dimen>
+    <dimen name="btn_common_size">48dp</dimen>
+    <dimen name="btn_small_size">24dp</dimen>
+
+    <!--Floating Action Button margins and size-->
+    <dimen name="float_action_size">40dp</dimen>
+    <dimen name="float_action_size_default">48dp</dimen>
+
+</resources>

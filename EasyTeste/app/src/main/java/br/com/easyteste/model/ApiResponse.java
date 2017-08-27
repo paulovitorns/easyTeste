@@ -15,16 +15,16 @@ public class ApiResponse {
 
     }
 
-    public static ApiResponse getDefaultServerError(){
+    public static ApiResponse getDefaultConnectionError(){
         ApiResponse api = new ApiResponse();
-        api.dialogType = EmptyStateTypes.ERROR_TYPE_SERVER;
+        api.dialogType = EmptyStateTypes.ERROR_TYPE_NO_CONNECTION;
 
         return api;
     }
 
-    public static ApiResponse getDefaultConnectionError(){
+    public static ApiResponse getDefaultLocationError(){
         ApiResponse api = new ApiResponse();
-        api.dialogType = EmptyStateTypes.ERROR_TYPE_NO_CONNECTION;
+        api.dialogType = EmptyStateTypes.ERROR_TYPE_NO_LOCATION;
 
         return api;
     }

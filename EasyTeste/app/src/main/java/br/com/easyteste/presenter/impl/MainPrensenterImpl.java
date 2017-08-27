@@ -9,6 +9,8 @@ import br.com.easyteste.datasource.services.impl.ManagerDefaultPlacesImpl;
 import br.com.easyteste.model.ApiResponse;
 import br.com.easyteste.model.Favorites;
 import br.com.easyteste.presenter.MainPrensenter;
+import br.com.easyteste.util.NetworkUtils;
+import br.com.easyteste.util.SnackBarUtils;
 import br.com.easyteste.view.MainView;
 
 /**
@@ -41,9 +43,15 @@ public class MainPrensenterImpl implements MainPrensenter, FavoritesResponseList
     @Override
     public void requestDefaultFavoritesPlaces() {
         if(!managerPlaces.isAlreadyLoaded()) {
-            FavoritesRequestVO requestVO = new FavoritesRequestVO();
-            requestVO.token = "M9e1vpTd";
-            favoritesService.requestFavorites(requestVO, this);
+
+            if(NetworkUtils.hasActiveInternetConnection()){
+                FavoritesRequestVO requestVO = new FavoritesRequestVO();
+                requestVO.token = "M9e1vpTd";
+                favoritesService.requestFavorites(requestVO, this);
+            }else{
+                mainView.showError(ApiResponse.getDefaultConnectionError().getDialogType());
+            }
+
         }else{
             mainView.showFragment(null);
         }

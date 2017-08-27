@@ -12,6 +12,6 @@ import retrofit.http.Query;
 
 public interface ServiceApi {
 
-    @GET("raw.php")
+    @GET("raw.php?")
     Call<FavoritesResponseVO> getDefaultFavorites(@Query("i") String token);
 }
