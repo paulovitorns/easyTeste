@@ -18,14 +18,6 @@ public class ApiErrorResponseImpl implements ApiErrorResponse {
 
         ApiResponse apiResponse = null;
 
-        switch (response.code()){
-            case 400:
-                break;
-            default:
-                apiResponse = ApiResponse.getDefaultServerError();
-                break;
-        }
-
         listener.onError(apiResponse);
     }
 
@@ -33,9 +25,6 @@ public class ApiErrorResponseImpl implements ApiErrorResponse {
     public void processFailure(BaseListener listener) {
         if(!NetworkUtils.hasActiveInternetConnection()){
             listener.onConnectionFail(ApiResponse.getDefaultConnectionError());
-        }
-        else{
-            listener.onServerNotRespond(ApiResponse.getDefaultServerError());
         }
     }
 

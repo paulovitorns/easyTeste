@@ -1,5 +1,9 @@
 package br.com.easyteste.presenter.impl;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+
 import br.com.easyteste.datasource.api.vo.request.FavoritesRequestVO;
 import br.com.easyteste.datasource.listeners.FavoritesResponseListener;
 import br.com.easyteste.datasource.services.FavoritesService;
@@ -7,18 +11,22 @@ import br.com.easyteste.datasource.services.ManagerDefaultPlaces;
 import br.com.easyteste.datasource.services.impl.FavoritesServiceImpl;
 import br.com.easyteste.datasource.services.impl.ManagerDefaultPlacesImpl;
 import br.com.easyteste.model.ApiResponse;
+import br.com.easyteste.model.EmptyStateTypes;
 import br.com.easyteste.model.Favorites;
 import br.com.easyteste.presenter.MainPrensenter;
+import br.com.easyteste.presenter.RequestPermissionPrensenter;
 import br.com.easyteste.util.NetworkUtils;
-import br.com.easyteste.util.SnackBarUtils;
 import br.com.easyteste.view.MainView;
+import br.com.easyteste.view.fragment.MapsFragment;
 
 /**
  * © Copyright 2017 Easy Teste.
  * Autor : Paulo Sales - paulovitorns@gmail.com
  */
 
-public class MainPrensenterImpl implements MainPrensenter, FavoritesResponseListener {
+public class MainPrensenterImpl implements MainPrensenter,
+        FavoritesResponseListener,
+        RequestPermissionPrensenter{
 
     private ManagerDefaultPlaces    managerPlaces;
     private FavoritesService        favoritesService;
@@ -49,11 +57,11 @@ public class MainPrensenterImpl implements MainPrensenter, FavoritesResponseList
                 requestVO.token = "M9e1vpTd";
                 favoritesService.requestFavorites(requestVO, this);
             }else{
-                mainView.showError(ApiResponse.getDefaultConnectionError().getDialogType());
+                mainView.showError(EmptyStateTypes.ERROR_TYPE_NO_CONNECTION);
             }
 
         }else{
-            mainView.showFragment(null);
+            requestLocationPermission();
         }
     }
 
@@ -75,6 +83,24 @@ public class MainPrensenterImpl implements MainPrensenter, FavoritesResponseList
     @Override
     public void onSuccess(Favorites favorites) {
 //        managerPlaces.setLoaded();
-        mainView.showFragment(null);
+        if(!NetworkUtils.isLocationAvailable()){
+            mainView.showError(EmptyStateTypes.ERROR_TYPE_NO_LOCATION);
+        }else{
+            mainView.showFragment(MapsFragment.newInstance());
+            requestLocationPermission();
+        }
+    }
+
+    @Override
+    public boolean hasLocationPermission() {
+        return ActivityCompat.checkSelfPermission(mainView.getActivityContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(mainView.getActivityContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    @Override
+    public void requestLocationPermission() {
+        if(!hasLocationPermission()){
+            mainView.requestLocationPermission();
+        }
     }
 }

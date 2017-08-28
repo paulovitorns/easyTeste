@@ -11,4 +11,5 @@ import android.support.v4.app.Fragment;
 public interface MainView extends BaseView {
     void showFragment(Fragment fragment);
     Context getActivityContext();
+    void requestLocationPermission();
 }
