@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/okio-1.6.0_65e4b781d11a588085b8348146492a3080d7cc5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/72ebc4461b36a7867247d7344e6e2faba71458e3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_955b3d014d3d59e6a92505ec68db2421e922aa29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/1d41becde4ccd59453dabaefdc2a08448faf64fd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_da77848d749ab9669bbf277dd362162943260f43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/2.0.0-beta2/880d9e0997b2d1bfc98e0d121ced33ee5d04aac4/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_ab136b651ab0201bdfa27b7c79c1f00120724361.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/44023f3d99e0c2852e651daf1e3a135bac39e302/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_461398ffc71e51d2dee76383f6f12d8497e5e09c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/850ab1c25f26ca7c197ce5a2196ef029729814d0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="19a40a8afe0289f6520b25353096ac233e78f69d">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_683daae36654357d88a4da9f725bc2a697fb6fb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/gson-2.3.1_ab55219fb2ef62897d8d7eb9f9f1b836067d9515.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/644fd64a489295406c0ed483bde4c928775bf0fc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_f978aa3d9f7e6e29dbeba7b853401e60beb86992.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/84c43279b0a4b566ce99233e36c9aa94a341fedc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_ff6ccd428b00978e997ff8b5e887220218518f17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_730f4bc95247f324c2e0556211338454d2b492f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/f5b7745ac2901ae6a2445059fee2c520a86a97a5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_cdc40fedad84a0f3a1355cfe2c9d372f662fb239.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/converter-gson/2.0.0-beta2/392c3d09e0f5e7087544093cc0cb23bb9c7af5fa/converter-gson-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="392c3d09e0f5e7087544093cc0cb23bb9c7af5fa">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta2_96eb73b212d92bc767202a2e3a0b9d3db5ba0ad0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/721935cabcdef017e45aa79a59ba23b62630304b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="5f43d6c042ee8eb48fa7606da4d1034d472a43cd">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_963bfb3f0cc45726ce4949352260881e813697aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_27d22af3502ac33b568387202ec72192c9279132.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/2780f5e5e3f2de087a99f9ace2023ede4ec6e128/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_932bfc28d0c82b5b10b4fbf3b77595305bb20a0c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/58018063189a66cf57df8cb181bf8108b21c3eb4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_6522f1391afb1277a6a6e9c69cdfca3b86547956.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/cd9c05f260dc75d40dfc2fdd672673e20664cfda/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d410043f93e71bb0179ba86b85726dd080f14b79">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_ec87e029d0c76024f72fbc1f2d1e10904ce7540b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/3e5d74f2d22184d08953fd1d67ec892f65427d98/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_25dd98d5b412b3f0b434a16b258bd0c0edbb4ddd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/logging-interceptor/2.6.0/77dc6e1eedd47953b41ef936f20b9b693fe73f6f/logging-interceptor-2.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="77dc6e1eedd47953b41ef936f20b9b693fe73f6f">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/logging-interceptor-2.6.0_c3f7904b311ab6e4c02a8f16cc71aecdb185c7d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/c7dd649c81612a0c2bb0e97eb53144b6d231ebeb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e72c498ef3e345135b6bfdf7fc83c6b905228ade">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_4dbd4dbc086bf6dc9341b8ab71295099afbeab62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.6.0/212387a39088ecd3daff8e3bfc3bdc4123e33c67/okhttp-2.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="212387a39088ecd3daff8e3bfc3bdc4123e33c67">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/okhttp-2.6.0_fd0cc2696a3cd1379f4091d366823fffd63ea185.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/dcc9483600b55077cdf565d996e8881b800bb15b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d68bbf92de9721b02a31a3833abfdc90144c7e39">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_05dec8faa75bf9103fa3ec05832e760ac4751219.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/19a2117348cccc4ca01442222d2222a55ca5fc22/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_74d94ff833bee691f294d1a69b4c8807422c46b9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/3175c756d94dfa17a2354e0eb8c7eb192b74f0c7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="5687d5d0a5cc1113f84a0477d8fdd3b91222d26e">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_08deb8c06de6ca7e6ea19b5a4b2a2b9cb12b18b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/551485dbe68d8252a2687865e79f2ef620ea3755/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_9219507d7b4dbaab44415ff87c1872c6593b21cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_a93788ff3a68b7129cfa106cf857f306c3f84944.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/.android/build-cache/1672318b04fc6efec33b3942ad2fcd37afb271e6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/classes_a87ce073458462dec99d7708065394a172e9fa4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/paulovitornogueirasales/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_fc1b57ef754616128a97e01fca9eec94fa98ad9a.jar" />
+    </item>
+
+</items>

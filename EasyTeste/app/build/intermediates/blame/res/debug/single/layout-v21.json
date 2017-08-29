@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]
