@@ -1,2 +1,2 @@
 # easyTeste
-Teste mobile para esasy táxi
+Teste mobile da Easy Taxi
