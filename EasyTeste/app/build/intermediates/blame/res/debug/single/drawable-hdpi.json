@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_star_border_black_24dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_star_border_black_24dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_location_off_black_48dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_location_off_black_48dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_warning_black_48dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_warning_black_48dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_signal_wifi_off_black_48dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_signal_wifi_off_black_48dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_location_disabled_black_48dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_location_disabled_black_48dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_star_black_24dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_star_black_24dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_chevron_right_white_24dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_chevron_right_white_24dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_search_black_36dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_search_black_36dp.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_ic_location.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_ic_location.png"
+    },
+    {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_my_location_black_24dp.png",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-hdpi/ic_my_location_black_24dp.png"
+    }
+]
