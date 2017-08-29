@@ -8,12 +8,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.NestedScrollView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -24,6 +24,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 import br.com.easyteste.R;
+import br.com.easyteste.model.Places;
+import br.com.easyteste.presenter.MapsPrensenter;
+import br.com.easyteste.presenter.impl.MapsPrensenterImpl;
 import br.com.easyteste.view.MapsView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -36,17 +39,23 @@ import butterknife.ButterKnife;
 public class MapsFragment extends Fragment implements
         OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener{
+        GoogleApiClient.OnConnectionFailedListener,
+        MapsView{
 
     @Bind(R.id.fabMyLocation)   FloatingActionButton    fabMyLocation;
-    @Bind(R.id.bottom_sheet)    NestedScrollView        bottomSheet;
+    @Bind(R.id.recyclerView)    RecyclerView            recycler;
 
-    private GoogleApiClient mGoogleApiClient;
-    private GoogleMap gMap;
+    private GoogleApiClient     mGoogleApiClient;
+    private GoogleMap           gMap;
     private BottomSheetBehavior mBottomSheetBehavior;
+    private MapsPrensenter      prensenter;
 
-    public static MapsFragment newInstance(){
-        return new MapsFragment();
+    public static MapsFragment newInstance(Places places){
+        MapsFragment mapsFragment = new MapsFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(Places.KEY, places);
+        mapsFragment.setArguments(bundle);
+        return mapsFragment;
     }
 
     @Override
@@ -70,30 +79,18 @@ public class MapsFragment extends Fragment implements
 
         ButterKnife.bind(this, view);
 
-        mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+        prensenter = new MapsPrensenterImpl(this);
+
+        if(getArguments() != null){
+            prensenter.getPlacesFromBundle(getArguments());
+        }
+
+        mBottomSheetBehavior = BottomSheetBehavior.from(recycler);
 
         int sizeOfPeeker = (int) getResources().getDimension(R.dimen.bottom_sheet_size);
 
         mBottomSheetBehavior.setPeekHeight(sizeOfPeeker);
-        mBottomSheetBehavior.setHideable(true);
-//        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
-        mBottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View bottomSheet, int newState) {
-
-                if(newState == BottomSheetBehavior.STATE_HIDDEN){
-
-                }
-            }
-
-            @Override
-            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-
-            }
-        });
-
-//        bottomSheet.setVisibility(View.VISIBLE);
-        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        mBottomSheetBehavior.setHideable(false);
 
         return view;
     }
@@ -138,4 +135,61 @@ public class MapsFragment extends Fragment implements
         this.gMap = googleMap;
     }
 
+    @Override
+    public void tapOnSearchButton() {
+
+    }
+
+    @Override
+    public void tapOnSeachBar() {
+
+    }
+
+    @Override
+    public void requestFocusIntoSearch() {
+
+    }
+
+    @Override
+    public void loadSearchResultsRecycler() {
+        recycler.setHasFixedSize(true);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recycler.setLayoutManager(mLayoutManager);
+    }
+
+    @Override
+    public void showSearchResult(RecyclerView.Adapter adapter) {
+        recycler.setAdapter(adapter);
+    }
+
+    @Override
+    public void tapOnFavorite() {
+
+    }
+
+    @Override
+    public void tapOnRequestLocation() {
+
+    }
+
+    @Override
+    public void tapOnFavoritePlaces() {
+
+    }
+
+    @Override
+    public void showFavoritePlaces() {
+
+    }
+
+    @Override
+    public void hideFavoritePlaces() {
+
+    }
+
+    @Override
+    public void animateCam(LatLng latLng) {
+
+    }
 }

@@ -3,6 +3,8 @@ package br.com.easyteste.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.orm.SugarApp;
+
 import br.com.easyteste.Easy;
 
 /**

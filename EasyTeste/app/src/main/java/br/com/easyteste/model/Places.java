@@ -1,5 +1,6 @@
 package br.com.easyteste.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,26 +12,28 @@ import br.com.easyteste.datasource.api.vo.response.FavoritesResponseVO;
  * Autor : Paulo Sales - paulovitorns@gmail.com
  */
 
-public class Favorites {
+public class Places implements Serializable{
 
-    private List<FavoriteItem> items;
+    public static final String KEY = Places.class.getSimpleName();
 
-    public Favorites(List<FavoriteItem> items) {
+    private List<PlaceItem> items;
+
+    public Places(List<PlaceItem> items) {
         this.items = items;
     }
 
-    public Favorites(FavoritesResponseVO responseVO) {
+    public Places(FavoritesResponseVO responseVO) {
         this.items = new ArrayList<>();
         generateFavorites(responseVO.list);
     }
 
     private void generateFavorites(List<FavoriteItemResponseVO> list){
         for (FavoriteItemResponseVO item : list){
-            this.items.add(new FavoriteItem(item));
+            this.items.add(new PlaceItem(item));
         }
     }
 
-    public List<FavoriteItem> getItems() {
+    public List<PlaceItem> getItems() {
         return items;
     }
 }

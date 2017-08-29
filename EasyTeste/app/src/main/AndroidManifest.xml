@@ -16,6 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data android:name="DATABASE" android:value="easy_teste.db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="br.com.easyteste" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_app_id" />

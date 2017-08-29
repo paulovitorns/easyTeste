@@ -3,6 +3,8 @@ package br.com.easyteste.model;
 import android.content.Intent;
 import android.provider.Settings;
 
+import com.orm.SugarApp;
+
 import br.com.easyteste.Easy;
 import br.com.easyteste.R;
 

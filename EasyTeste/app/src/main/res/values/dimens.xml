@@ -19,6 +19,7 @@
     <dimen name="margin_mediun">24dp</dimen>
     <dimen name="margin_big">32dp</dimen>
     <dimen name="margin_large">64dp</dimen>
+    <dimen name="margin_fab_fav">104dp</dimen>
     <dimen name="margin_extra_large">128dp</dimen>
 
     <!--EditTexts Sizes-->
@@ -34,6 +35,6 @@
     <dimen name="float_action_size_default">48dp</dimen>
 
     <!--Bottom sheet Sizes-->
-    <dimen name="bottom_sheet_size">80dp</dimen>
+    <dimen name="bottom_sheet_size">32dp</dimen>
 
 </resources>

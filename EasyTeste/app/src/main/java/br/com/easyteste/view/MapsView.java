@@ -1,5 +1,6 @@
 package br.com.easyteste.view;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -32,5 +33,7 @@ public interface MapsView {
     void hideFavoritePlaces();
 
     void animateCam(LatLng latLng);
+
+    Context getContext();
 
 }

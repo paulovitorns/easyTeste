@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 
 import br.com.easyteste.datasource.api.vo.request.FavoritesRequestVO;
+import br.com.easyteste.datasource.database.dao.PlaceDao;
 import br.com.easyteste.datasource.listeners.FavoritesResponseListener;
 import br.com.easyteste.datasource.services.FavoritesService;
 import br.com.easyteste.datasource.services.ManagerDefaultPlaces;
@@ -12,7 +13,7 @@ import br.com.easyteste.datasource.services.impl.FavoritesServiceImpl;
 import br.com.easyteste.datasource.services.impl.ManagerDefaultPlacesImpl;
 import br.com.easyteste.model.ApiResponse;
 import br.com.easyteste.model.EmptyStateTypes;
-import br.com.easyteste.model.Favorites;
+import br.com.easyteste.model.Places;
 import br.com.easyteste.presenter.MainPrensenter;
 import br.com.easyteste.presenter.RequestPermissionPrensenter;
 import br.com.easyteste.util.NetworkUtils;
@@ -51,7 +52,6 @@ public class MainPrensenterImpl implements MainPrensenter,
     @Override
     public void requestDefaultFavoritesPlaces() {
         if(!managerPlaces.isAlreadyLoaded()) {
-
             if(NetworkUtils.hasActiveInternetConnection()){
                 FavoritesRequestVO requestVO = new FavoritesRequestVO();
                 requestVO.token = "M9e1vpTd";
@@ -61,7 +61,7 @@ public class MainPrensenterImpl implements MainPrensenter,
             }
 
         }else{
-            requestLocationPermission();
+            onSuccess(new PlaceDao().getPlaces());
         }
     }
 
@@ -81,12 +81,12 @@ public class MainPrensenterImpl implements MainPrensenter,
     }
 
     @Override
-    public void onSuccess(Favorites favorites) {
-//        managerPlaces.setLoaded();
+    public void onSuccess(Places places) {
+        managerPlaces.setLoaded();
         if(!NetworkUtils.isLocationAvailable()){
             mainView.showError(EmptyStateTypes.ERROR_TYPE_NO_LOCATION);
         }else{
-            mainView.showFragment(MapsFragment.newInstance());
+            mainView.showFragment(MapsFragment.newInstance(places));
             requestLocationPermission();
         }
     }

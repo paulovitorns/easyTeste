@@ -1,6 +1,6 @@
 package br.com.easyteste.datasource.listeners;
 
-import br.com.easyteste.model.Favorites;
+import br.com.easyteste.model.Places;
 
 /**
  * © Copyright 2017 Easy Teste.
@@ -8,5 +8,5 @@ import br.com.easyteste.model.Favorites;
  */
 
 public interface FavoritesResponseListener extends BaseListener{
-    void onSuccess(Favorites favorites);
+    void onSuccess(Places places);
 }
