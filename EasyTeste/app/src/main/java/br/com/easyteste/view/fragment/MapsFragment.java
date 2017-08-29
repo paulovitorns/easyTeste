@@ -7,17 +7,19 @@ import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -30,6 +32,7 @@ import br.com.easyteste.presenter.impl.MapsPrensenterImpl;
 import br.com.easyteste.view.MapsView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * © Copyright 2017 Easy Teste.
@@ -42,13 +45,16 @@ public class MapsFragment extends Fragment implements
         GoogleApiClient.OnConnectionFailedListener,
         MapsView{
 
-    @Bind(R.id.fabMyLocation)   FloatingActionButton    fabMyLocation;
-    @Bind(R.id.recyclerView)    RecyclerView            recycler;
+    @Bind(R.id.fabMyLocation)           FloatingActionButton    fabMyLocation;
+    @Bind(R.id.bottom_sheet)            LinearLayout            bottomSheet;
+    @Bind(R.id.recyclerView)            RecyclerView            recycler;
 
     private GoogleApiClient     mGoogleApiClient;
     private GoogleMap           gMap;
     private BottomSheetBehavior mBottomSheetBehavior;
     private MapsPrensenter      prensenter;
+    private double              lastLat;
+    private double              lastLng;
 
     public static MapsFragment newInstance(Places places){
         MapsFragment mapsFragment = new MapsFragment();
@@ -62,9 +68,8 @@ public class MapsFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_maps, container, false);
-        setHasOptionsMenu(true);
-        SupportMapFragment mapFragment = SupportMapFragment.newInstance();
 
+        SupportMapFragment mapFragment = SupportMapFragment.newInstance();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.mapFrag, mapFragment).commit();
         mapFragment.getMapAsync(this);
@@ -79,20 +84,31 @@ public class MapsFragment extends Fragment implements
 
         ButterKnife.bind(this, view);
 
-        prensenter = new MapsPrensenterImpl(this);
+        prensenter = new MapsPrensenterImpl(this, mGoogleApiClient);
 
         if(getArguments() != null){
             prensenter.getPlacesFromBundle(getArguments());
         }
 
-        mBottomSheetBehavior = BottomSheetBehavior.from(recycler);
+        if(savedInstanceState != null){
+            lastLat = savedInstanceState.getDouble("lastLat");
+            lastLng = savedInstanceState.getDouble("lastLng");
 
-        int sizeOfPeeker = (int) getResources().getDimension(R.dimen.bottom_sheet_size);
-
-        mBottomSheetBehavior.setPeekHeight(sizeOfPeeker);
-        mBottomSheetBehavior.setHideable(false);
+            updateCam(new LatLng(lastLat, lastLng));
+        }
 
         return view;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        lastLat = gMap.getCameraPosition().target.latitude;
+        lastLng = gMap.getCameraPosition().target.longitude;
+
+        outState.putDouble("lastLat", lastLat);
+        outState.putDouble("lastLng", lastLng);
+        super.onSaveInstanceState(outState);
     }
 
     @Override
@@ -116,7 +132,10 @@ public class MapsFragment extends Fragment implements
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-
+        if(lastLng == 0 && lastLat == 0)
+            prensenter.requestUserPosition();
+        else
+            updateCam(new LatLng(lastLat, lastLng));
     }
 
     @Override
@@ -164,32 +183,51 @@ public class MapsFragment extends Fragment implements
     }
 
     @Override
-    public void tapOnFavorite() {
+    public void tapOnAddFavorite() {
 
     }
 
+    @OnClick(R.id.fabMyLocation)
     @Override
     public void tapOnRequestLocation() {
-
+        prensenter.requestUserPosition();
     }
 
+    @OnClick(R.id.btnPeeker)
     @Override
-    public void tapOnFavoritePlaces() {
+    public void openBottomSheet() {
+        int sizeOfPeeker = (int) getResources().getDimension(R.dimen.bottom_sheet_open_size);
+        mBottomSheetBehavior.setPeekHeight(sizeOfPeeker);
+        mBottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
 
+                if(newState == BottomSheetBehavior.STATE_DRAGGING){
+                    int sizeOfPeeker = (int) getResources().getDimension(R.dimen.bottom_sheet_size);
+                    mBottomSheetBehavior.setPeekHeight(sizeOfPeeker);
+                }
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
     }
 
     @Override
     public void showFavoritePlaces() {
-
+        mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+        int sizeOfPeeker = (int) getResources().getDimension(R.dimen.bottom_sheet_size);
+        mBottomSheetBehavior.setPeekHeight(sizeOfPeeker);
+        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        mBottomSheetBehavior.setHideable(false);
     }
 
     @Override
-    public void hideFavoritePlaces() {
-
+    public void updateCam(LatLng latLng) {
+        CameraUpdate updateCam = CameraUpdateFactory.newLatLngZoom(latLng, 16);
+        gMap.moveCamera(updateCam);
     }
 
-    @Override
-    public void animateCam(LatLng latLng) {
-
-    }
 }

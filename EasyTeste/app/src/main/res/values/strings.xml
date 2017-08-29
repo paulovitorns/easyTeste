@@ -9,4 +9,10 @@
 
     <string name="empty_state">não encontramos resultados para esta buscar</string>
 
+    <string name="intro_favorite_places">Lugares Favoritos</string>
+
+    <string name="menu_search">buscar lugares</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

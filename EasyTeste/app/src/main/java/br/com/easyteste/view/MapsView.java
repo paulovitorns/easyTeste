@@ -22,17 +22,15 @@ public interface MapsView {
 
     void showSearchResult(RecyclerView.Adapter adapter);
 
-    void tapOnFavorite();
+    void tapOnAddFavorite();
 
     void tapOnRequestLocation();
 
-    void tapOnFavoritePlaces();
+    void openBottomSheet();
 
     void showFavoritePlaces();
 
-    void hideFavoritePlaces();
-
-    void animateCam(LatLng latLng);
+    void updateCam(LatLng latLng);
 
     Context getContext();
 

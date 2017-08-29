@@ -10,6 +10,7 @@ import android.widget.TextView;
 import br.com.easyteste.R;
 import br.com.easyteste.model.PlaceItem;
 import br.com.easyteste.model.Places;
+import br.com.easyteste.presenter.MapsPrensenter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -20,12 +21,14 @@ import butterknife.ButterKnife;
 
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
 
-    private Places  places;
-    private Context context;
+    private Places          places;
+    private Context         context;
+    private MapsPrensenter  prensenter;
 
-    public PlacesAdapter(Places places, Context context) {
+    public PlacesAdapter(Places places, Context context, MapsPrensenter prensenter) {
         this.places     = places;
         this.context    = context;
+        this.prensenter = prensenter;
     }
 
     @Override
@@ -41,6 +44,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         if(place != null){
             holder.name.setText(place.getName());
             holder.setItem(place);
+            holder.setPresenter(prensenter);
         }
     }
 
@@ -53,7 +57,8 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
 
         @Bind(R.id.txtPlaceName) TextView name;
 
-        private PlaceItem item;
+        private PlaceItem       item;
+        private MapsPrensenter  presenter;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -65,9 +70,13 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
             this.item = item;
         }
 
+        public void setPresenter(MapsPrensenter presenter) {
+            this.presenter = presenter;
+        }
+
         @Override
         public void onClick(View view) {
-
+            presenter.placeSelected(item);
         }
     }
 }

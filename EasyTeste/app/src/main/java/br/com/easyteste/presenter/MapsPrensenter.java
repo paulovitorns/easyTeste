@@ -2,6 +2,9 @@ package br.com.easyteste.presenter;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.GoogleMap;
+
+import br.com.easyteste.model.PlaceItem;
 import br.com.easyteste.model.Places;
 
 /**
@@ -12,4 +15,6 @@ import br.com.easyteste.model.Places;
 public interface MapsPrensenter extends BasePresenter {
     void getPlacesFromBundle(Bundle bundle);
     void generateAdapter(Places places);
+    void requestUserPosition();
+    void placeSelected(PlaceItem place);
 }

@@ -35,6 +35,7 @@
     <dimen name="float_action_size_default">48dp</dimen>
 
     <!--Bottom sheet Sizes-->
-    <dimen name="bottom_sheet_size">32dp</dimen>
+    <dimen name="bottom_sheet_size">48dp</dimen>
+    <dimen name="bottom_sheet_open_size">144dp</dimen>
 
 </resources>
