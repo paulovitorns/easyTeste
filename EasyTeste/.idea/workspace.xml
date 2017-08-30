@@ -14,30 +14,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/presenter/impl/MainPrensenterImpl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/presenter/impl/MainPrensenterImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/presenter/impl/MapsPrensenterImpl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/presenter/impl/MapsPrensenterImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/MainView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/MainView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/MapsView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/MapsView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/activity/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/activity/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/activity/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/activity/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/activity/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/activity/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/fragment/MapsFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/fragment/MapsFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/fragment/MapsFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/br/com/easyteste/view/fragment/MapsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/E54n4o_b5jG1q2sORVgDVWnMPL4=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/E54n4o_b5jG1q2sORVgDVWnMPL4=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_0a096cfb99246c9a74fdb31c0de8f188664ae4e5.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_0a096cfb99246c9a74fdb31c0de8f188664ae4e5.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MainPrensenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MainPrensenterImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/MainView.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/MainView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/MapsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/MapsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/fragment/MapsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/fragment/MapsFragment.java" />
     </list>
     <ignored path="Easy Teste.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,6 +49,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state />
         </projects_view>
@@ -71,7 +63,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainPrensenterImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainPrensenterImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MainPrensenterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
@@ -123,7 +115,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapsFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapsFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/fragment/MapsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
@@ -131,19 +123,6 @@
               <folding>
                 <element signature="e#7582#7636#0" expanded="true" />
                 <element signature="e#8037#8091#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapsPrensenterImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-              <folding>
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1321#1322#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2132,10 +2111,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_maps.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/MainView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/MapsView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/fragment/MapsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MainPrensenterImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java" />
       </list>
     </option>
   </component>
@@ -2228,6 +2207,24 @@
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
+    <configuration default="false" name="EasyTeste [assembleDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assembleDebug" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -2514,9 +2511,15 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.EasyTeste [assembleDebug]" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.EasyTeste [assembleDebug]" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -2564,7 +2567,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.658805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3063,28 +3066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="e#1278#1279#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/fragment/MapsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-          <folding>
-            <element signature="e#7582#7636#0" expanded="true" />
-            <element signature="e#8037#8091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/datasource/services/impl/ApiErrorResponseImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -3108,6 +3089,28 @@
         <state relative-caret-position="134">
           <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/presenter/impl/MapsPrensenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+          <folding>
+            <element signature="e#1278#1279#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/easyteste/view/fragment/MapsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <element signature="e#7582#7636#0" expanded="true" />
+            <element signature="e#8037#8091#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -69,14 +69,18 @@ public class MapsPrensenterImpl implements MapsPrensenter, RequestPermissionPren
 
     @Override
     public void requestUserPosition() {
-        if (ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            requestLocationPermission();
-            return;
+
+        if (mapsView.getContext() != null){
+            if (ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                requestLocationPermission();
+                return;
+            }
+
+            Location location = LocationServices.FusedLocationApi.getLastLocation(apiClient);
+            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+            mapsView.updateCam(latLng);
         }
 
-        Location location = LocationServices.FusedLocationApi.getLastLocation(apiClient);
-        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        mapsView.updateCam(latLng);
     }
 
     @Override
