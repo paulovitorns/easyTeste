@@ -10,6 +10,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 
+import br.com.easyteste.datasource.database.dao.PlaceDao;
 import br.com.easyteste.model.PlaceItem;
 import br.com.easyteste.model.Places;
 import br.com.easyteste.presenter.MapsPrensenter;
@@ -49,6 +50,13 @@ public class MapsPrensenterImpl implements MapsPrensenter {
     }
 
     @Override
+    public void reloadPlaces() {
+        adapter = new PlacesAdapter(new PlaceDao().getPlaces(), mapsView.getContext(), this);
+        mapsView.showSearchResult(adapter);
+        mapsView.showFavoritePlaces();
+    }
+
+    @Override
     public void generateAdapter(Places places) {
 
         if(adapter == null)
@@ -74,5 +82,6 @@ public class MapsPrensenterImpl implements MapsPrensenter {
     public void placeSelected(PlaceItem place) {
         LatLng latLng = new LatLng(place.getLatitude(), place.getLongitude());
         mapsView.updateCam(latLng);
+        mapsView.closeBottomSheet();
     }
 }

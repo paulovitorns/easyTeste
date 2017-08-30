@@ -149,6 +149,8 @@ public class MainPrensenterImpl implements MainPrensenter,
 
             adapter.addAll(places.getPredictions());
         }
+
+        mainView.hideEmpty();
     }
 
     @Override
@@ -156,11 +158,11 @@ public class MainPrensenterImpl implements MainPrensenter,
         if(adapter != null && adapter.getItemCount() > 0)
             adapter.removeAllItens();
 
+        mainView.showEmpty();
     }
 
     @Override
     public void onSuccess(GPlace place) {
-
         mainView.updateMaps(place);
     }
 }

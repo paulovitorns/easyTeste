@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -31,6 +32,7 @@ import br.com.easyteste.model.Places;
 import br.com.easyteste.presenter.MapsPrensenter;
 import br.com.easyteste.presenter.impl.MapsPrensenterImpl;
 import br.com.easyteste.view.MapsView;
+import br.com.easyteste.view.component.CustomDialog;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -68,10 +70,16 @@ public class MapsFragment extends Fragment implements
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_maps, container, false);
-
+        setHasOptionsMenu(true);
         SupportMapFragment mapFragment = SupportMapFragment.newInstance();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.mapFrag, mapFragment).commit();
@@ -104,12 +112,21 @@ public class MapsFragment extends Fragment implements
     @Override
     public void onSaveInstanceState(Bundle outState) {
 
-        lastLat = gMap.getCameraPosition().target.latitude;
-        lastLng = gMap.getCameraPosition().target.longitude;
+        lastLat = (gMap != null) ? gMap.getCameraPosition().target.latitude : 0;
+        lastLng = (gMap != null) ? gMap.getCameraPosition().target.longitude : 0;
 
         outState.putDouble("lastLat", lastLat);
         outState.putDouble("lastLng", lastLng);
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.menu_fav){
+            CustomDialog customDialog = new CustomDialog(getContext(), gMap.getCameraPosition().target, prensenter);
+            customDialog.show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -219,6 +236,13 @@ public class MapsFragment extends Fragment implements
 
             }
         });
+    }
+
+    @Override
+    public void closeBottomSheet() {
+        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        int sizeOfPeeker = (int) getResources().getDimension(R.dimen.bottom_sheet_size);
+        mBottomSheetBehavior.setPeekHeight(sizeOfPeeker);
     }
 
     @Override

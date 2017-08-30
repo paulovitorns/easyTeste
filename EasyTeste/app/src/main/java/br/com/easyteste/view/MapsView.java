@@ -32,6 +32,8 @@ public interface MapsView {
 
     void openBottomSheet();
 
+    void closeBottomSheet();
+
     void showFavoritePlaces();
 
     void updateCam(LatLng latLng);

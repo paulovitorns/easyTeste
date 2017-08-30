@@ -17,5 +17,7 @@ public interface MainView extends BaseView {
     void requestLocationPermission();
     void loadAdapter();
     void setPlacesAdapter(RecyclerView.Adapter adapter);
+    void showEmpty();
+    void hideEmpty();
     void updateMaps(GPlace gPlace);
 }

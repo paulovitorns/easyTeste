@@ -14,6 +14,7 @@ import br.com.easyteste.model.Places;
 
 public interface MapsPrensenter extends BasePresenter {
     void getPlacesFromBundle(Bundle bundle);
+    void reloadPlaces();
     void generateAdapter(Places places);
     void requestUserPosition();
     void placeSelected(PlaceItem place);

@@ -1,6 +1,7 @@
 package br.com.easyteste.view.activity;
 
 import android.Manifest;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
@@ -16,6 +17,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 
 import br.com.easyteste.R;
@@ -38,12 +41,16 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Bind(R.id.fragmentView)    FrameLayout     frameLayout;
     @Bind(R.id.searchToolbar)   Toolbar         toolbar;
+    @Bind(R.id.containerSearch) RelativeLayout  containerSearch;
+    @Bind(R.id.emptyState)      RelativeLayout  emptyState;
     @Bind(R.id.recyclerView)    RecyclerView    recycler;
 
     private MainPrensenter      prensenter;
     private static final int    PERMISSION_LOCATION_REQUEST_CODE = 200;
     private boolean             isSearchOpen;
-    private SearchView          searchView;
+    private SearchView          mSearchView;
+    private MenuItem            favMenu;
+    private Fragment            fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +59,19 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+
         prensenter = new MainPrensenterImpl(this);
-        prensenter.requestDefaultFavoritesPlaces();
+
+        if(savedInstanceState == null) {
+            prensenter.requestDefaultFavoritesPlaces();
+        }else{
+
+            fragment = getSupportFragmentManager().findFragmentByTag(MapsFragment.TAG);
+            if (fragment == null) {
+                prensenter.requestDefaultFavoritesPlaces();
+            }
+        }
+
     }
 
     @Override
@@ -66,10 +84,26 @@ public class MainActivity extends AppCompatActivity implements MainView {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
 
+        favMenu             = menu.findItem(R.id.menu_fav);
         MenuItem searchMenu = menu.findItem(R.id.menu_search);
-        searchView          = (SearchView) searchMenu.getActionView();
+        mSearchView = (SearchView) searchMenu.getActionView();
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        int searchImgId = getResources().getIdentifier("android:id/search_button", null, null);
+        ImageView v = (ImageView) mSearchView.findViewById(searchImgId);
+        v.setImageResource(R.drawable.ic_search_black_24dp);
+
+        mSearchView.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                favMenu.setVisible(false);
+                if(containerSearch.getVisibility() == View.GONE)
+                    containerSearch.setVisibility(View.VISIBLE);
+                if(!isSearchOpen)
+                    isSearchOpen = true;
+            }
+        });
+
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
@@ -77,21 +111,17 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if(recycler.getVisibility() == View.GONE)
-                    recycler.setVisibility(View.VISIBLE);
-
-                if(!isSearchOpen)
-                    isSearchOpen = true;
-
                 prensenter.requestPlaces(newText);
                 return false;
             }
         });
 
-        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+        mSearchView.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
-                recycler.setVisibility(View.GONE);
+                favMenu.setVisible(true);
+                containerSearch.setVisibility(View.GONE);
+                isSearchOpen = false;
                 return false;
             }
         });
@@ -100,11 +130,17 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public void onBackPressed() {
         if(isSearchOpen){
-            searchView.onActionViewCollapsed();
+            mSearchView.onActionViewCollapsed();
             isSearchOpen = false;
-            recycler.setVisibility(View.GONE);
+            containerSearch.setVisibility(View.GONE);
+            favMenu.setVisible(true);
         }else{
             super.onBackPressed();
         }
@@ -166,13 +202,26 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
+    public void showEmpty() {
+        emptyState.setVisibility(View.VISIBLE);
+        recycler.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void hideEmpty() {
+        emptyState.setVisibility(View.GONE);
+        recycler.setVisibility(View.VISIBLE);
+    }
+
+    @Override
     public void updateMaps(GPlace gPlace) {
         Fragment fragment = getSupportFragmentManager().findFragmentByTag(MapsFragment.TAG);
         if(fragment instanceof MapsFragment){
 
-            searchView.onActionViewCollapsed();
             isSearchOpen = false;
-            recycler.setVisibility(View.GONE);
+            favMenu.setVisible(true);
+            mSearchView.onActionViewCollapsed();
+            containerSearch.setVisibility(View.GONE);
 
             MapsFragment maps = (MapsFragment) fragment;
             maps.receiveNewPlace(gPlace);

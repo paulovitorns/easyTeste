@@ -18,13 +18,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
+        android:id="@+id/containerSearch"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="@dimen/margin_top_search"
-        android:visibility="gone"
-        android:background="@color/colorWhite"/>
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_top_search"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_top_search">
+
+            <ImageView
+                android:id="@+id/imgEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:src="@drawable/ic_warning_black_48dp"
+                android:layout_centerHorizontal="true"
+                android:tint="@color/colorWhite"/>
+
+            <TextView
+                android:layout_below="@id/imgEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_default"
+                android:paddingLeft="@dimen/margin_big"
+                android:paddingRight="@dimen/margin_big"
+                android:textAlignment="center"
+                android:text="@string/empty_search"
+                android:textSize="@dimen/font_big"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
 
