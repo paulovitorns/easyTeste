@@ -1,10 +1,13 @@
 package br.com.easyteste.view.fragment;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
@@ -53,7 +56,7 @@ public class MapsFragment extends Fragment implements
     @Bind(R.id.recyclerView)            RecyclerView            recycler;
 
     public static final String TAG = MapsFragment.class.getSimpleName();
-
+    private static final int    PERMISSION_LOCATION_REQUEST_CODE = 200;
     private GoogleApiClient     mGoogleApiClient;
     private GoogleMap           gMap;
     private BottomSheetBehavior mBottomSheetBehavior;
@@ -258,6 +261,30 @@ public class MapsFragment extends Fragment implements
     public void updateCam(LatLng latLng) {
         CameraUpdate updateCam = CameraUpdateFactory.newLatLngZoom(latLng, 16);
         gMap.moveCamera(updateCam);
+    }
+
+
+    @Override
+    public void requestLocationPermission() {
+        requestPermissions(
+                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
+                PERMISSION_LOCATION_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_LOCATION_REQUEST_CODE: {
+
+                if ( grantResults.length > 0
+                        && ((grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                        || (grantResults[1] == PackageManager.PERMISSION_GRANTED))) {
+                        prensenter.requestUserPosition();
+                }
+                return;
+            }
+
+        }
     }
 
 }

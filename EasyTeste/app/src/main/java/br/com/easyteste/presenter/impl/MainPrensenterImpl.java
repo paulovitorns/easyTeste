@@ -39,7 +39,6 @@ import br.com.easyteste.view.fragment.MapsFragment;
 
 public class MainPrensenterImpl implements MainPrensenter,
         FavoritesResponseListener,
-        RequestPermissionPrensenter,
         OnGPlacesRequestFinished,
         OnPlaceResponseFinishedListener{
 
@@ -104,12 +103,12 @@ public class MainPrensenterImpl implements MainPrensenter,
 
     @Override
     public void onConnectionFail(ApiResponse error) {
-        mainView.showFragment(null, "");
+        mainView.showError(EmptyStateTypes.ERROR_TYPE_NO_CONNECTION);
     }
 
     @Override
     public void onServerNotRespond(ApiResponse error) {
-        mainView.showFragment(null, "");
+//        mainView.showFragment(null, "");
     }
 
     @Override
@@ -119,20 +118,6 @@ public class MainPrensenterImpl implements MainPrensenter,
             mainView.showError(EmptyStateTypes.ERROR_TYPE_NO_LOCATION);
         }else{
             mainView.showFragment(MapsFragment.newInstance(places), MapsFragment.TAG);
-            requestLocationPermission();
-        }
-    }
-
-    @Override
-    public boolean hasLocationPermission() {
-        return ActivityCompat.checkSelfPermission(mainView.getActivityContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(mainView.getActivityContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
-    }
-
-    @Override
-    public void requestLocationPermission() {
-        if(!hasLocationPermission()){
-            mainView.requestLocationPermission();
         }
     }
 

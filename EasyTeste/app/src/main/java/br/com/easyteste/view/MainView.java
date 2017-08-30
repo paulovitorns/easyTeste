@@ -14,7 +14,6 @@ import br.com.easyteste.model.GPlace;
 public interface MainView extends BaseView {
     void showFragment(Fragment fragment, String tag);
     Context getActivityContext();
-    void requestLocationPermission();
     void loadAdapter();
     void setPlacesAdapter(RecyclerView.Adapter adapter);
     void showEmpty();

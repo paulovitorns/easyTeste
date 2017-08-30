@@ -40,4 +40,5 @@ public interface MapsView {
 
     Context getContext();
 
+    void requestLocationPermission();
 }

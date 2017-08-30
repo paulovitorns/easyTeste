@@ -14,6 +14,7 @@ import br.com.easyteste.datasource.database.dao.PlaceDao;
 import br.com.easyteste.model.PlaceItem;
 import br.com.easyteste.model.Places;
 import br.com.easyteste.presenter.MapsPrensenter;
+import br.com.easyteste.presenter.RequestPermissionPrensenter;
 import br.com.easyteste.view.MapsView;
 import br.com.easyteste.view.adapter.PlacesAdapter;
 
@@ -22,7 +23,7 @@ import br.com.easyteste.view.adapter.PlacesAdapter;
  * Autor : Paulo Sales - paulovitorns@gmail.com
  */
 
-public class MapsPrensenterImpl implements MapsPrensenter {
+public class MapsPrensenterImpl implements MapsPrensenter, RequestPermissionPrensenter {
 
     private MapsView        mapsView;
     private PlacesAdapter   adapter;
@@ -36,11 +37,11 @@ public class MapsPrensenterImpl implements MapsPrensenter {
 
     @Override
     public void onCreate() {
-
     }
 
     @Override
     public void init() {
+        requestLocationPermission();
     }
 
     @Override
@@ -69,7 +70,7 @@ public class MapsPrensenterImpl implements MapsPrensenter {
     @Override
     public void requestUserPosition() {
         if (ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Request Permission
+            requestLocationPermission();
             return;
         }
 
@@ -83,5 +84,18 @@ public class MapsPrensenterImpl implements MapsPrensenter {
         LatLng latLng = new LatLng(place.getLatitude(), place.getLongitude());
         mapsView.updateCam(latLng);
         mapsView.closeBottomSheet();
+    }
+
+    @Override
+    public boolean hasLocationPermission() {
+        return ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(mapsView.getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    @Override
+    public void requestLocationPermission() {
+        if(!hasLocationPermission()){
+            mapsView.requestLocationPermission();
+        }
     }
 }

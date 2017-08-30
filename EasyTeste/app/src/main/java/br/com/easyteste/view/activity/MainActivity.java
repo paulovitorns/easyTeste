@@ -1,11 +1,8 @@
 package br.com.easyteste.view.activity;
 
-import android.Manifest;
-import android.app.FragmentManager;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
     @Bind(R.id.recyclerView)    RecyclerView    recycler;
 
     private MainPrensenter      prensenter;
-    private static final int    PERMISSION_LOCATION_REQUEST_CODE = 200;
     private boolean             isSearchOpen;
     private SearchView          mSearchView;
     private MenuItem            favMenu;
@@ -72,6 +68,16 @@ public class MainActivity extends AppCompatActivity implements MainView {
             }
         }
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        fragment = getSupportFragmentManager().findFragmentByTag(MapsFragment.TAG);
+        if (fragment == null) {
+            prensenter.requestDefaultFavoritesPlaces();
+        }
     }
 
     @Override
@@ -160,32 +166,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
-    public void requestLocationPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
-                PERMISSION_LOCATION_REQUEST_CODE);
-    }
-
-    @Override
     public void showError(EmptyStateTypes types) {
         SnackBarUtils.showSnackDialog(frameLayout, this, types);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case PERMISSION_LOCATION_REQUEST_CODE: {
-
-                if ( grantResults.length > 0
-                        && ((grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                        || (grantResults[1] == PackageManager.PERMISSION_GRANTED))) {
-
-                } else {
-
-                }
-                return;
-            }
-
-        }
     }
 
     @Override
