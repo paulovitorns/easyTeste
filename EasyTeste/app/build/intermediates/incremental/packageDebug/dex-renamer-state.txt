@@ -1,4 +1,4 @@
-#Tue Aug 29 15:18:05 BRT 2017
+#Tue Aug 29 23:01:05 BRT 2017
 base.0=/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

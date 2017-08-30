@@ -72,6 +72,10 @@
         "source": "/Users/paulovitornogueirasales/.android/build-cache/19a2117348cccc4ca01442222d2222a55ca5fc22/output/res/layout/design_layout_snackbar.xml"
     },
     {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/layout/simple_drop_down_item.xml",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/layout/simple_drop_down_item.xml"
+    },
+    {
         "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
         "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/layout/notification_template_icon_group.xml"
     },

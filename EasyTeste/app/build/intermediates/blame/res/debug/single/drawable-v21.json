@@ -12,6 +12,10 @@
         "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-v21/ripple.xml",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-v21/ripple.xml"
+    },
+    {
         "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
         "source": "/Users/paulovitornogueirasales/.android/build-cache/19a2117348cccc4ca01442222d2222a55ca5fc22/output/res/drawable-v21/design_password_eye.xml"
     },

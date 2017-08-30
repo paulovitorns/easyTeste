@@ -667,11 +667,11 @@
     <dimen name="margin_big">32dp</dimen>
     <dimen name="margin_default">16dp</dimen>
     <dimen name="margin_extra_large">128dp</dimen>
-    <dimen name="margin_fab_fav">104dp</dimen>
     <dimen name="margin_large">64dp</dimen>
     <dimen name="margin_mediun">24dp</dimen>
     <dimen name="margin_micro">4dp</dimen>
     <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_top_search">100dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
     <dimen name="notification_big_circle_margin">12dp</dimen>

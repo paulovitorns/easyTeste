@@ -2,6 +2,9 @@ package br.com.easyteste.view;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
+
+import br.com.easyteste.model.GPlace;
 
 /**
  * © Copyright 2017 Easy Teste.
@@ -9,7 +12,10 @@ import android.support.v4.app.Fragment;
  */
 
 public interface MainView extends BaseView {
-    void showFragment(Fragment fragment);
+    void showFragment(Fragment fragment, String tag);
     Context getActivityContext();
     void requestLocationPermission();
+    void loadAdapter();
+    void setPlacesAdapter(RecyclerView.Adapter adapter);
+    void updateMaps(GPlace gPlace);
 }

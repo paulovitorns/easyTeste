@@ -144,6 +144,10 @@
         "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/bg_white_with_bottom_grey_divider.xml",
+        "source": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/src/main/res/drawable-xxhdpi/bg_white_with_bottom_grey_divider.xml"
+    },
+    {
         "merged": "/Users/paulovitornogueirasales/AndroidStudioProjects/easyTeste/EasyTeste/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
         "source": "/Users/paulovitornogueirasales/.android/build-cache/8da900512ec5b09219041919869bce4a0f552e44/output/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },

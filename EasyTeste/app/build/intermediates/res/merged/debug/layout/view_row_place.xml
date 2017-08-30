@@ -5,24 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_white_with_top_grey_divider"
-    android:padding="@dimen/margin_default"
     android:clickable="true">
 
-    <TextView
-        android:id="@+id/txtPlaceName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginRight="@dimen/margin_default"
-        android:text="@string/app_name"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        android:textSize="@dimen/font_mediun"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_default"
+        android:gravity="center_vertical"
+        android:background="@drawable/ripple">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_chevron_right_white_24dp"
-        android:tint="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/txtPlaceName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/margin_default"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_mediun"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right_white_24dp"
+            android:tint="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
 
 </LinearLayout>

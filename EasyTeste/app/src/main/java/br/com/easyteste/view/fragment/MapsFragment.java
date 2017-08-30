@@ -26,6 +26,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 import br.com.easyteste.R;
+import br.com.easyteste.model.GPlace;
 import br.com.easyteste.model.Places;
 import br.com.easyteste.presenter.MapsPrensenter;
 import br.com.easyteste.presenter.impl.MapsPrensenterImpl;
@@ -48,6 +49,8 @@ public class MapsFragment extends Fragment implements
     @Bind(R.id.fabMyLocation)           FloatingActionButton    fabMyLocation;
     @Bind(R.id.bottom_sheet)            LinearLayout            bottomSheet;
     @Bind(R.id.recyclerView)            RecyclerView            recycler;
+
+    public static final String TAG = MapsFragment.class.getSimpleName();
 
     private GoogleApiClient     mGoogleApiClient;
     private GoogleMap           gMap;
@@ -93,8 +96,6 @@ public class MapsFragment extends Fragment implements
         if(savedInstanceState != null){
             lastLat = savedInstanceState.getDouble("lastLat");
             lastLng = savedInstanceState.getDouble("lastLng");
-
-            updateCam(new LatLng(lastLat, lastLng));
         }
 
         return view;
@@ -152,6 +153,11 @@ public class MapsFragment extends Fragment implements
     @Override
     public void onMapReady(GoogleMap googleMap) {
         this.gMap = googleMap;
+    }
+
+    @Override
+    public void receiveNewPlace(GPlace gPlace) {
+        updateCam(new LatLng(gPlace.getResult().getGeometry().getLat(), gPlace.getResult().getGeometry().getLng()));
     }
 
     @Override
